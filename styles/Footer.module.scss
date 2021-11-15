@@ -1,0 +1,30 @@
+.footer {
+    background-color: #2f3337;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    .footerInner {
+        text-align: center;
+        p {
+            color: #fff;
+            font-size: 1.05em;
+            letter-spacing: 1.5px;
+        }
+        .socialMediaLinks {
+            text-align: center;
+            ul {
+                li {
+                    display: inline-block;
+                    padding-right: 15px;
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 1.1em;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.cookieBanner {
+    background-color: #2f3337;
+    right: 25px;
+    bottom: 25px;
+    position: fixed;
+    display: block;
+    width: 300px !important;
+    z-index: 999;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #fff;
+    font-size: 0.9em;
+    font-family: "Rubik", sans-serif;
+    .cookieBannerButton {
+        width: 100%;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    h6 {
+        width: 100% !important;
+        cursor: pointer;
+        text-align: center;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

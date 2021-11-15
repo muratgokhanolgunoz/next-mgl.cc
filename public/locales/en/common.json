@@ -1,0 +1,229 @@
+{
+    "template": {
+        "HTML_PAGE_TITLE": "Midas Global Logistics",
+        "buttons": {
+            "TEMPLATE_CLOSE_BUTTON": "Close",
+            "TEMPLATE_NEXT_BUTTON": "Next",
+            "TEMPLATE_PREVIOUS_BUTTON": "Previous"
+        },
+        "notification": {
+            "errors": {
+                "404": "Requested Page Not Found",
+                "API_ERROR": "API connection error",
+                "SCHEDULE_NULL_ALERT": "Failed to copy ship information to clipboard. Please try again",
+                "GALLERY_VIDEO_NOT_FOUND": "Video not found"                
+            },
+            "warnings": {
+                "FILE_SIZE": "Please upload within specified file size ranges"
+            }
+        }
+    },
+    "404": {
+        "404_PAGE_TEXT": "Requested Page Not Found"
+    },
+    "navbar": {
+        "NAVBAR_ITEM_HOME": "Home",
+        "NAVBAR_ITEM_SERVICES": "Services",
+        "NAVBAR_ITEM_ABOUT_US": "About Us",
+        "NAVBAR_ITEM_VIDEO_GALLERY": "Videos",
+        "NAVBAR_ITEM_SHIP_PROGRAM": "Vessel Schedule",
+        "NAVBAR_ITEM_ARTICLES_FROM_US": "Our Articles",
+        "NAVBAR_ITEM_CAREER": "Career",
+        "NAVBAR_ITEM_CONTACT": "Contact Us"
+    },
+    "home": {
+        "calendar": {
+            "CALENDAR_WEEK_TEXT": "Week",
+            "CALENDAR_MONTH_NAMES": [
+                "",
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ],
+            "CALENDAR_DAY_NAMES": [
+                "",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ]
+        },
+        "widgets": {
+            "tracking": {
+                "WIDGETS_TRACKING_TITLE": "e-Tracking",
+                "WIDGETS_TRACKING_BODY": "Track your cargo with your bill of lading, quote or reference number",
+                "WIDGETS_TRACKING_INPUT_PLACEHOLDER": "Bill of lading number"
+            },
+            "pricing": {
+                "WIDGETS_PRICING_TITLE": "e-Freight",
+                "WIDGETS_PRICING_BODY": "First choose from to where, then select container or partial and see the freight instantly",
+                "WIDGETS_PRICING_BUTTON_TEXT": "Freight Look Up"
+            },
+            "WIDGETS_BILL_OF_LADING_NUMBER_MESSAGE": "Please enter bill of lading number"
+        }
+    },
+    "services": {
+        "header": {
+            "SERVICES_SECTION_TITLE": "Services",
+            "SERVICES_SECTION_SUBTITLE": "",
+            "SERVICES_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "first": {
+                "SERVICES_SECTION_FIRST_TITLE": "Shipping",
+                "SERVICES_SECTION_FIRST_BODY": "Our expert staff in sea transport is as close as a phone call for your shipments from Ambarlı, Izmit, Gemlik, Izmir, Mersin and Iskenderun to the issues such as pre-transport, final transport, port costs, suitable freight. Furthermore our personnel working with vehicles on the field are integrated in real time through the mobile application running in our company substructure."
+            },
+            "second": {
+                "SERVICES_SECTION_SECOND_TITLE": "Consolidation",
+                "SERVICES_SECTION_SECOND_BODY": "The number of partial destinations wich we serve from the port of Ambarlı is approximately 300. When qualified loads (Barrel, Liquid, Dangerous..) are combined with experience, it is possible to achieve more successful jobs. The data in our real-time ship program, which we are publishing below, is presented via API technology from our application server and can be followed moment by moment."
+            },
+            "third": {
+                "SERVICES_SECTION_THIRD_TITLE": "Handling Special Equipment ",
+                "SERVICES_SECTION_THIRD_BODY": "Flat Rack Container, Open TOP container, Dangerous Goods Transportation (IMCO) and Refrigerated Container (reefer) shipments require expertise and what makes difference is paying attention to minor details.One of our customer representatives who will guide you correctly will do their best to deliver the goods to your customer in the best condition."
+            },
+            "fourth": {
+                "SERVICES_SECTION_FOURTH_TITLE": "Door Delivery",
+                "SERVICES_SECTION_FOURTH_BODY": "With our experience of more than 25 years and our wide agency network, the expenses such as pre-transportation, loading port costs, final transportation and warehouse that you will need for your door-to-door deliveries will be at your fingertips before you take your goods out of your store. All that's left for you to do is to monitor whether the transportation process is going as planned. Tracking the process online had never been easier."
+            }
+        }
+    },
+    "about": {
+        "header": {
+            "ABOUT_SECTION_TITLE": "About Us",
+            "ABOUT_SECTION_SUBTITLE": "",
+            "ABOUT_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "ABOUT_SECTION_TEXT": "Midas Global Logistics is a logistics company based in Istanbul, which was established in 1996, and specialized in maritime partial transportation. From the main ports of Turkey, Istanbul/Ambarli (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, Iskenderun, Antalya, and Trabzon; Full container service to the Far East, North America, South America, Middle East, Far East, Mediterranean and African ports.  Morocco, Algeria, Tunisia, Libya, Egypt, Lebanon, Israel, Saudi Arabia, United Arab Emirates, Sri Lanka, Spain, United States, and It provides partial service to Singapore. Project transportation, fair transportation, partial, container transfer, and cross transportation are our areas of expertise. We have our own offices in Istanbul Mecidiyeköy headquarters, Beylikdüzü, and Zhuhai, China. Midas Global Logistics is Turkey's first digital freight forwarder that implements applications that require digital infrastructures such as e-Booking and e-Navlun, and it is Turkey's flag carrier local company in digitalization.",
+            "ABOUT_SECTION_BUTTON_PRESENTATION": "Access Our Presentation File"
+        }
+    },
+    "gallery": {
+        "header": {
+            "GALLERY_SECTION_TITLE": "Video Gallery",
+            "GALLERY_SECTION_SUBTITLE": "",
+            "GALLERY_SECTION_DESCRIPTION": ""
+        }
+    },
+    "schedule": {
+        "header": {
+            "SCHEDULE_SECTION_TITLE": "Realtime Vessel Schedules",
+            "SCHEDULE_SECTION_SUBTITLE": "",
+            "SCHEDULE_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "table": {
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "Destination",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Vessel Name",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "ETA to POL",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Declaration Cut off",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Load Place",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "Line",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "Vessel Cut off"
+            },
+            "clipboard": {
+                "body": {
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Destination : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Vessel Name : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Load Place : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_ACCEPTANCE_RANGE": "Load Acceptance Range : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Load Date : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "Vessel Cutoff : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "ETA to POL : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "Line : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "Last Update : "
+                },
+                "SCHEDULE_SECTION_CLIPBOARD_MESSAGE": "Vessel information copied to clipboard "
+            },
+            "SCHEDULE_SECTION_EMPTY_MESSAGE": "No active vessel schedule found"
+        }
+    },
+    "blog": {
+        "header": {
+            "BLOG_SECTION_TITLE": "Our Articles",
+            "BLOG_SECTION_SUBTITLE": "",
+            "BLOG_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "BLOG_SECTION_BUTTON": "Read More . . .",
+            "BLOG_SECTION_ITEMS_AUTHOR_PREFIX": "by"
+        },
+        "error": {
+            "BLOG_SECTION_ERROR_BLOG_NOT_FOUND": "The article was not found. Please check the link and try again"
+        }
+    },
+    "career": {
+        "header": {
+            "CAREER_SECTION_TITLE": "Career",
+            "CAREER_SECTION_SUBTITLE": "",
+            "CAREER_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "notification": {
+                "CAREER_SECTION_NOTIFICATION_SUCCESS_MESSAGE": "Successful",
+                "CAREER_SECTION_NOTIFICATION_ERROR_MESSAGE": "An error has occurred",
+                "form_validation": {
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_NAME": "Name cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_SURNAME": "Surname cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_EMAIL": "Email cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_EMAIL_FORMAT": "Email must be entered in the correct format",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_PHONE": "Phone cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_FILE": "File cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_FILE_SIZE": "File can be up to 5 MB in size",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_CAPTCHA": "Please verify captcha"
+                }
+            },
+            "form": {
+                "CAREER_SECTION_INPUT_NAME": "Name",
+                "CAREER_SECTION_INPUT_SURNAME": "Surname",
+                "CAREER_SECTION_INPUT_EMAIL": "Email",
+                "CAREER_SECTION_INPUT_PHONE": "Phone",
+                "CAREER_SECTION_INPUT_MESSAGE": "Message",
+                "CAREER_SECTION_BUTTON_UPLOAD_FILE": "Upload CV",
+                "CAREER_SECTION_CAPTCHA": "Enter captcha",
+                "CAREER_SECTION_BUTTON_SEND": "Send",
+                "CAREER_SECTION_INPUT_FILE_HELP_FILE_TYPE": "File Type",
+                "CAREER_SECTION_INPUT_FILE_HELP_FILE_SIZE": "Maximum Size"
+            }
+        }
+    },
+    "contact": {
+        "header": {
+            "CONTACT_SECTION_TITLE": "Contact Us",
+            "CONTACT_SECTION_SUBTITLE": "",
+            "CONTACT_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "address_information": {
+                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "Şişli, Istanbul, Turkey",
+                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyeköy Mahallesi Şehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyeköy İş Merkezi"
+            },
+            "phone_information": {
+                "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Monday - Friday / 09:00am - 18:00pm"
+            },
+            "email_information": {
+                "CONTACT_SECTION_EMAIL_INFORMATION_BODY": "Get in Touch"
+            }
+        }
+    },
+    "footer": {
+        "FOOTER_TEXT": "Midas Global Logistics"
+    },
+    "privacy": {
+        "PRIVACY_HEADER": "Your Privacy",
+        "PRIVACY_TEXT": "Clicking on the \"Accept Cookies\" button will help Midas Global Logistics remember the language selection on your device.",
+        "PRIVACY_BUTTON": "Accept Cookies"
+    }
+}

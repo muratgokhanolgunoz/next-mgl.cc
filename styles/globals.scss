@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caladea&display=swap");
+
+:root {
+    --color-1: #fa6f2a;
+    --color-2: #002f78;
+    --font-family-1: "Caladea", serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family-1);
+}
+
+::-moz-selection {
+    background: var(--color-1);
+    color: #fff;
+}
+::selection {
+    background: var(--color-1);
+    color: #fff;
+}
+
+.section-padding {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+/* ========== CUSTOM SCROLLBAR STYLES ========== */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ========== TOASTIFY STYLES ========== */
+.Toastify__toast-container {
+    font-size: 0.85em;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: inherit;
+    border-style: none;
+    border-width: 0;
+}
+
+.pin-to-right {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.pin-to-left {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.pin-to-center {
+    display: block;
+    margin: auto;
+}
+
+.slick-slide {
+    transform: scale(0.8);
+    transition: transform .3s;
+}
+
+.slick-center {
+    transform: scale(1.1);
+    transition: transform .3s;
+}
+
+.text-primary-2 {
+    color: var(--color-2);
+}
+
+/* ========== BUTTON STYLES ========== */
+
+.template-button-box-shadow {
+    -webkit-box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
+}
+
+.template-button {
+    padding: 10px 20px;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+    font-size: 0.9em;
+    white-space: nowrap;
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.template-button-danger {
+    background-color: #544141;
+    transition: all 0.5s;
+}
+
+.template-button-danger:hover {
+    background-color: #544141;
+    transition: all 0.5s;
+}
+
+.template-button-primary-1 {
+    background-color: var(--color-1);
+    transition: all 0.5s;
+}
+
+.template-button-primary-1:hover {
+    background-color: var(--color-2);
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.template-button-primary-1:focus {
+    background-color: var(--color-1);
+    outline: 0 !important;
+}
+
+.template-button-primary-1:focus:hover {
+    background-color: var(--color-2);
+}
+
+.template-button-primary-2 {
+    background-color: var(--color-2);
+    transition: all 0.5s;
+}
+
+.template-button-primary-2:hover {
+    background-color: var(--color-1);
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.template-button-primary-2:focus {
+    background-color: var(--color-2);
+    outline: 0 !important;
+}
+
+.template-button-primary-2:focus:hover {
+    background-color: var(--color-1);
+}

@@ -1,0 +1,37 @@
+.blogBox {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+    .blogBoxImage {
+        margin-bottom: 30px;
+    }
+    .blogBoxItem {
+        border: 1px solid lightgray;
+        padding: 20px;
+        height: 100% !important;
+        &:hover {
+            border: 1px solid var(--color-2);
+            transition: background-color 0.5s;
+            cursor: pointer;
+        }
+        .blogBoxItemAuthor {
+            white-space: nowrap;
+        }
+        a {
+            position: absolute;
+            color: #000 !important;
+            text-decoration: none !important;
+        }
+    }
+    h6 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    p {
+        text-align: justify;
+    }
+}

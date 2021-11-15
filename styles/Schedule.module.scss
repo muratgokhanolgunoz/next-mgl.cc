@@ -1,0 +1,49 @@
+@mixin tableTr {
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    border-color: transparent;
+    color: #fff;
+}
+
+.clipboardArea {
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+}
+
+.tableSchedule {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    font-family: "Rubik", sans-serif;
+    thead {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-color: transparent;
+        tr {
+            @include tableTr();
+        }
+    }
+    tbody {
+        tr {
+            background-color: rgba(255, 255, 255, 0.15);
+            @include tableTr();
+            &:hover {
+                color: #fff !important;
+            }
+        }
+    }
+    .tableScheduleRowSpan {
+        display: block;
+        white-space: nowrap;
+    }
+    .scheduleNullMessage {
+        font-size: 1.3em;
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .tableSchedule {
+        font-size: 0.8em;
+    }
+}

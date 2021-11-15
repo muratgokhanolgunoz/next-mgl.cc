@@ -1,0 +1,63 @@
+.servicesItem {
+    transition: margin-top 0.5s;
+    margin-bottom: 25px;
+    .servicesBox {
+        background-color: #fff;
+        padding: 30px;
+        -webkit-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
+        -moz-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
+        box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
+        .servicesIcon {
+            color: lightgray;
+            transition: color 0.5s;
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+            font-size: 5em;
+        }
+        h3 {
+            margin: 40px 0;
+            position: absolute;
+        }
+        p {
+            text-align: left;
+            margin-top: 10px;
+            font-size: 1.1em;
+            min-height: 155px;
+            text-align: justify;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .servicesItem {
+        &:hover .servicesBox .servicesIcon {
+            color: var(--color-1);
+            transition: color 0.5s;
+        }
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .servicesBox {
+        p {
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .servicesBox {
+        p {
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .servicesBox {
+        p {
+            height: auto;
+        }
+    }
+}

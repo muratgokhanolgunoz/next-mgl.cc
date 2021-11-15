@@ -1,0 +1,51 @@
+.navbar {
+    -webkit-box-shadow: 0px -1px 12px 0px rgba(153, 153, 153, 1);
+    -moz-box-shadow: 0px -1px 12px 0px rgba(153, 153, 153, 1);
+    box-shadow: 0px -1px 12px 0px rgba(153, 153, 153, 1);
+    .navbarInner {
+        a {
+            margin: 10px;
+            font-size: 1em;
+            text-transform: uppercase;
+            color: #000;
+            cursor: pointer;
+        }
+        .changeLanguage {
+            span {
+                border: 1px solid lightgray;
+                font-size: 1.2em;
+                border: none;
+                cursor: pointer;
+                
+                a {
+                    text-decoration: none;
+                    margin: 5px;                    
+                }
+                img {
+                    margin-top: -3px !important;                  
+                }
+            }
+        }
+    }
+    .navbarPhone {
+        a {
+            text-decoration: none;
+            color: #000;
+            padding: 0 30px;
+            font-size: 1.1em;
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navbarPhone {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .navbarInner {
+        font-size: 0.8em;
+    }
+}

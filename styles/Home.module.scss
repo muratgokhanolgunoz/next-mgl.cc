@@ -1,0 +1,33 @@
+.home {
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    .homeCalender {
+        width: 125px;
+        height: 100px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 30px;
+        .homeCalenderItem {
+            margin-top: 10px;
+            text-align: center;
+            font-family: "Rubik", sans-serif;
+            border-radius: 5px;
+            padding: 10px;
+
+            span,
+            h1 {
+                color: #fff;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: -1px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .home {
+        height: 450px;
+    }
+}

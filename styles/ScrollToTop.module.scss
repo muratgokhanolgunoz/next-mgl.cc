@@ -1,0 +1,18 @@
+.buttonScrollToTop {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--color-2);
+    color: #fff;
+    padding: 0px 10px 5px 10px;
+    font-size: 2em;
+    margin: 10px;
+    display: none;
+    transition: background-color .5s;
+    cursor: pointer;
+    z-index: 9999;
+    &:hover {
+        background-color: var(--color-1);
+        color: #fff;
+        transition: background-color .5s;
+    }
+}

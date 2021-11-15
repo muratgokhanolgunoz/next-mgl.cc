@@ -1,0 +1,26 @@
+$backgroundColor: rgba(232, 232, 232, 0.3);
+
+.career {
+    font-family: "Rubik", sans-serif;
+    .inputLabel {
+        font-weight: lighter;
+    }
+    .input {
+        background-color: $backgroundColor;
+        border: none;
+        border-radius: 0 !important;
+        &:focus,
+        &:active {
+            background-color: $backgroundColor;
+            outline: 0 none !important;
+            box-shadow: none !important;
+        }
+    }
+    .inputUpload {
+        background-color: $backgroundColor;
+        border: none;
+        border-radius: 0;
+        width: 100% !important;
+        padding: 15px;
+    }
+}
