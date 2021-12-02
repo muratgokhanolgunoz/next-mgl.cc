@@ -32,3 +32,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# gitignore
+.gitignore
+
+# .prettierrc.json
+.prettierrc.json

@@ -4,6 +4,7 @@ import BlogDetails from "../../src/components/frontend/sections/blog/BlogDetails
 import { getSelectedBlog } from "../../src/utils/services/blogService";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Layout from "../../src/components/frontend/Layout";
 
 const Blog = ({ blogData }) => {
     const router = useRouter();

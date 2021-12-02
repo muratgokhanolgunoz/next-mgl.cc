@@ -97,7 +97,7 @@ const Schedule = ({ schedule }) => {
                 </Row>
                 <Row>
                     <textarea id="clipboard-area" className={styles.clipboardArea} type="hidden" />
-                    <Table className={styles.tableSchedule} hover={true} responsive={true}>
+                    <Table className={styles.tableSchedule} responsive={true}>
                         <thead>
                             <tr>
                                 <th>

@@ -1,18 +1,20 @@
 import axios from "axios";
 
-export const getBlogs = async (_language) => {
+export const getBlogs = async (_data) => {
     return await axios.get(
-        process.env.NEXT_PUBLIC_PUBLIC_API_URL + "mglBlog/" + _language
+        /* process.env.NEXT_PUBLIC_PUBLIC_API_URL */ "http://127.0.0.1:8000/api/" +
+            "mglBlog/" +
+            _data.language +
+            "/" +
+            _data.itemsPerPage +
+            "/" +
+            _data.page
     );
 };
 
 export const getSelectedBlog = async (_language, _id) => {
     return await axios.get(
-        process.env.NEXT_PUBLIC_PUBLIC_API_URL +
-            "mglBlog/" +
-            _language +
-            "/" +
-            _id
+        process.env.NEXT_PUBLIC_PUBLIC_API_URL + "mglBlog/" + _language + "/" + _id
     );
 };
 

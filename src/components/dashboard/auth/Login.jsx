@@ -32,7 +32,7 @@ const Login = () => {
 
         getToken(payload)
             .then((response) => {
-                if (response.status.ok) {
+                if (response.status === 200) {
                     context.funcSetToken(response.data.token);
                 } else {
                     showToast("top-right", "Authentication failed", "error", 10000);
