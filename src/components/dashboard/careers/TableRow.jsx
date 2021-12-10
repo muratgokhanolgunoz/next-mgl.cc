@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { RiDeleteBinLine } from "react-icons/ri";
 
-const TableRow = ({ career, funcSetSelectedCareerItem, funcSetModalState }) => {
+const TableRow = ({ career, funcSetSelectedCareerItem, funcSetModalState, funcDelete }) => {
+
     return (
         <>
             <tr>
@@ -32,11 +34,24 @@ const TableRow = ({ career, funcSetSelectedCareerItem, funcSetModalState }) => {
                     )}
                 </td>
                 <td>
-                    <a href={career.file} target="_blank" rel="noreferrer">
+                    <a href={career.location} target="_blank" rel="noreferrer">
                         CV File
                     </a>
                 </td>
                 <td>{career.date}</td>
+                <td>
+                    <a
+                        className="text-primary"
+                        style={{
+                            cursor: "pointer",
+                            fontSize: "1.3em",
+                            color: "#000",
+                        }}
+                        onClick={() => funcDelete(career.id)}
+                    >
+                        <RiDeleteBinLine />
+                    </a>
+                </td>
             </tr>
         </>
     );
@@ -46,6 +61,7 @@ TableRow.propTypes = {
     career: PropTypes.object.isRequired,
     funcSetSelectedCareerItem: PropTypes.func.isRequired,
     funcSetModalState: PropTypes.func.isRequired,
+    funcDelete: PropTypes.func.isRequired
 };
 
 export default TableRow;

@@ -3,22 +3,25 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Col, Image } from "react-bootstrap";
 import { useTranslation } from "next-i18next";
 import styles from "../../../../../styles/Blog.module.scss";
 
-const BlogItem = ({ blogId, blog }) => {
+const BlogItem = ({ blog }) => {
     const { t, i18n } = useTranslation("common");
+    const router = useRouter();
+    const { locale } = router;
 
     return (
         <>
             <Col className={styles.blogBox} xl={3} md={6} key={blog.BLOG_SECTION_ITEMS_ID}>
-                <Link href={{ pathname: `/blog/${blogId}` }} passHref>
-                    <a target="_blank">
+                <Link href={{ pathname: `${locale}/blog/${blog.BLOG_SECTION_ITEMS_ID}` }} passHref>
+                    <a>
                         <div className={styles.blogBoxItem}>
                             <Image
                                 className={styles.blogBoxImage}
-                                src={blog.BLOG_SECTION_ITEMS_THUMBNAIL}
+                                src={blog.BLOG_SECTION_ITEMS_PHOTO}
                                 fluid
                             />
                             <span className={styles.blogBoxItemAuthor}>
@@ -54,7 +57,6 @@ const BlogItem = ({ blogId, blog }) => {
 };
 
 BlogItem.propTypes = {
-    blogId: PropTypes.number.isRequired,
     blog: PropTypes.object.isRequired,
 };
 

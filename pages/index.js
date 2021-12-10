@@ -34,7 +34,7 @@ const Index = (props) => {
                 <meta
                     name="description"
                     content="Denizyolu parsiyel taşımacılığının Türk markası Midas Global Lojistik İstanbul Ambarlı gümrüğü limanlarından onlarca destinasyona her hafta düzenli parsiyel hizmeti sunmaktadır."
-                />
+                />                
                 <meta property="og:title" content={t("template.HTML_PAGE_TITLE")} />
                 <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
                 <meta property="og:type" content="website" />
@@ -44,7 +44,7 @@ const Index = (props) => {
                 />
                 <meta
                     property="og:image"
-                    content={`${process.env.NEXT_PUBLIC_URL}/assets/img/android-chrome-192x192.png`}
+                    content={`${process.env.NEXT_PUBLIC_URL}/assets/img/cansu.jpg`}
                 />
                 <link
                     rel="apple-touch-icon"
@@ -62,7 +62,7 @@ const Index = (props) => {
                 <About />
                 <Gallery videos={props.videosData} urlQuery={props.urlQuery} />
                 <Schedule schedule={props.vesselScheduleData} />
-                <Blog blogs={props.blogsData} />
+                <Blog />
                 <Career />
                 <Contact />
             </Layout>
@@ -73,7 +73,6 @@ const Index = (props) => {
 export const getServerSideProps = async ({ locale, query }) => {
     const responseHomeData = getHome();
     const responseGalleryData = getVideos(locale);
-    const responseBlogData = getBlogs(locale);
     const responseVesselSchedule = getSchedule();
 
     return {
@@ -81,7 +80,6 @@ export const getServerSideProps = async ({ locale, query }) => {
             ...(await serverSideTranslations(locale, ["common"])),
             homeData: (await responseHomeData).data.result,
             videosData: (await responseGalleryData).data.result,
-            blogsData: (await responseBlogData).data.result,
             vesselScheduleData: (await responseVesselSchedule).data.ships,
             urlQuery: query,
         },

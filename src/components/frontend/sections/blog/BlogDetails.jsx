@@ -6,6 +6,7 @@ import styles from "../../../../../styles/BlogDetails.module.scss";
 import { useRouter } from "next/router";
 import elementsJSON from "../../../../../public/elements/elements.json";
 import { useTranslation } from "next-i18next";
+import BlogDetailsList from "./BlogDetailsList";
 
 let arrayFindElements = [];
 let tempObject = {},
@@ -161,11 +162,7 @@ const BlogDetails = ({ blog }) => {
             </Head>
             <Container>
                 <Row>
-                    <Col
-                        className={styles.modalBlogPreviewBody}
-                        lg={{ span: 8, offset: 2 }}
-                        md={12}
-                    >
+                    <Col className={styles.modalBlogPreviewBody} lg={8} md={12}>
                         <Row>
                             <Image
                                 className={styles.modalBlogPreviewBodyImage}
@@ -201,6 +198,9 @@ const BlogDetails = ({ blog }) => {
                         <Row>
                             <p id="article"></p>
                         </Row>
+                    </Col>
+                    <Col lg={4}>
+                        <BlogDetailsList />
                     </Col>
                 </Row>
             </Container>

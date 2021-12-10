@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-export const showToast = (_position, _text, _type, _duration) => {
+export const showToast = (_position, _text, _type, _duration = 10000) => {
     toast(_text, {
         position: _position,
         autoClose: _duration,

@@ -27,7 +27,10 @@ const Blog = () => {
     const listBlogs = () => {
         getBlogs(context.dashboardBlogsLanguage)
             .then((response) => setBlogs(response.data.result))
-            .catch(() => console.warn("Error : API ERROR"));
+            .catch((error) => {
+                console.warn("Error : API ERROR " + error);
+                showToast("bottom-right", error, "error");
+            });
     };
 
     const [blogId, setBlogId] = useState("");
@@ -383,20 +386,20 @@ const Blog = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {blogs.map((blogItem, index) => (
+                                {blogs.map((blogItem) => (
                                     <>
-                                        <tr>
-                                            <td>{index + 1}</td>
+                                        <tr key={blogItem.BLOG_SECTION_ITEMS_ID}>
+                                            <td>{blogItem.BLOG_SECTION_ITEMS_ID}</td>
                                             <td>{blogItem.BLOG_SECTION_ITEMS_AUTHOR}</td>
                                             <td>{blogItem.BLOG_SECTION_ITEMS_TITLE}</td>
                                             <td>{blogItem.BLOG_SECTION_ITEMS_DATE}</td>
                                             <td>
                                                 <a
-                                                    href={`https://mgl.cc/${context.dashboardBlogsLanguage}/blog/${index}`}
+                                                    href={`${process.env.NEXT_PUBLIC_URL}/${context.dashboardBlogsLanguage}/blog/${blogItem.BLOG_SECTION_ITEMS_ID}`}
                                                     target="_blank"
                                                     rel="nopenner noreferrer"
                                                 >
-                                                    {`https://mgl.cc/${context.dashboardBlogsLanguage}/blog/${index}`}
+                                                    {`${process.env.NEXT_PUBLIC_URL}/${context.dashboardBlogsLanguage}/blog/${blogItem.BLOG_SECTION_ITEMS_ID}`}
                                                 </a>
                                             </td>
                                             <td>
@@ -424,7 +427,9 @@ const Blog = () => {
                                                         fontSize: "1.3em",
                                                         color: "#000",
                                                     }}
-                                                    onClick={() => getEditBlog(index)}
+                                                    onClick={() =>
+                                                        getEditBlog(blogItem.BLOG_SECTION_ITEMS_ID)
+                                                    }
                                                 >
                                                     <RiEditBoxLine />
                                                 </a>
