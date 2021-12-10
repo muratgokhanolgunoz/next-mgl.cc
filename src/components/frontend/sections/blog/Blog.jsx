@@ -36,13 +36,7 @@ const Blog = (_) => {
 
     useEffect(() => {
         try {
-            const data = {
-                language: locale,
-                itemsPerPage: 4,
-                page: currentPage,
-            };
-
-            getBlogs(data).then((response) => {
+            getBlogs(locale, 4, currentPage).then((response) => {
                 setBlogs(response.data.result);
                 setTotalPage(response.data.totalPage);
             });

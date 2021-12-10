@@ -4,12 +4,9 @@ import { Row, Col } from "react-bootstrap";
 import { useTranslation } from "next-i18next";
 import style from "../../../../../styles/BlogDetailsListRow.module.scss";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const BlogDetailsListRow = ({ blog }) => {
     const { t } = useTranslation("common");
-    const router = useRouter();
-    const { locale } = router;
 
     return (
         <>

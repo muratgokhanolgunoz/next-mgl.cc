@@ -5,6 +5,8 @@ import TableRow from "./TableRow";
 import { Table as BootstrapTable } from "react-bootstrap";
 import { getCareerList } from "../../../utils/services/careerService";
 import Modal from "../../../components/frontend/tools/Modal";
+import { deleteCareer } from "../../../utils/services/careerService";
+import { showToast } from "../../../core/functions";
 
 const Table = (_) => {
     const [careerList, setCareerList] = useState([]);
@@ -12,11 +14,44 @@ const Table = (_) => {
     const [selectedCareerItem, setSelectedCareerItem] = useState({});
 
     useEffect(() => {
-        getCareerList()
-            .then((response) => setCareerList(response.data.result.reverse()))
-            .then((response) => console.log(response))
-            .catch(() => console.warn("Error : API ERROR"));
+        getCareers();
     }, []);
+
+    const getCareers = () => {
+        getCareerList()
+            .then((response) => {
+                if (response.status === 200) {
+                    setCareerList(response.data.result.reverse());
+                }
+            })
+            .catch((error) => {
+                console.warn(error);
+                showToast("bottom-center", error, "error");
+            });
+    };
+
+    const deleteCareerRow = (_id) => {
+        if (confirm("Do you really want to delete your career row with id " + _id + " ?")) {
+            const payload = new FormData();
+            payload.append("id", _id);
+
+            deleteCareer(payload)
+                .then((response) => {
+                    if (response.status === 200) {
+                        showToast("bottom-right", "Success", "success");
+                    } else {
+                        showToast("bottom-right", "An error occured", "error");
+                    }
+                })
+                .then(() => {
+                    getCareers();
+                })
+                .catch((error) => {
+                    console.log(error);
+                    showToast("bottom-right", error, "error");
+                });
+        }
+    };
 
     return (
         <div id="careers-table">
@@ -30,6 +65,7 @@ const Table = (_) => {
                         <th>Message</th>
                         <th>File</th>
                         <th>Date</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +75,7 @@ const Table = (_) => {
                             career={careerItem}
                             funcSetSelectedCareerItem={setSelectedCareerItem}
                             funcSetModalState={setModalState}
+                            funcDelete={deleteCareerRow}
                         />
                     ))}
                 </tbody>

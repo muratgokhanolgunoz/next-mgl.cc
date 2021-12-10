@@ -21,7 +21,7 @@ const BlogItem = ({ blog }) => {
                         <div className={styles.blogBoxItem}>
                             <Image
                                 className={styles.blogBoxImage}
-                                src={blog.BLOG_SECTION_ITEMS_THUMBNAIL}
+                                src={blog.BLOG_SECTION_ITEMS_PHOTO}
                                 fluid
                             />
                             <span className={styles.blogBoxItemAuthor}>

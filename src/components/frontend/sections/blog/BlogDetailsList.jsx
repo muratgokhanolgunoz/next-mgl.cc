@@ -4,30 +4,30 @@ import { showToast } from "../../../../core/functions";
 import { getBlogs } from "../../../../utils/services/blogService";
 import { useRouter } from "next/router";
 import BlogDetailsListRow from "./BlogDetailsListRow";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import { useTranslation } from "next-i18next";
 
 const BlogDetailsList = (_) => {
     const router = useRouter();
-    const { locale } = router;
+    const { locale, query } = router;
     const [blogs, setBlogs] = useState([]);
+    const { t } = useTranslation("common");
 
     useEffect(() => {
         try {
-            const data = {
-                language: locale,
-                itemsPerPage: 5,
-                page: 1,
-            };
-
-            getBlogs(data).then((response) => {
-                setBlogs(response.data.result);
+            getBlogs(locale, 5, 1).then((response) => {
+                setBlogs(
+                    response.data.result.filter(
+                        (blog) => blog.BLOG_SECTION_ITEMS_ID !== parseInt(query.blogId)
+                    )
+                );
             });
         } catch (error) {
             console.warn(error);
             showToast("bottom-right", error, "error");
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [query.blogId]);
 
     return (
         <>
@@ -41,11 +41,10 @@ const BlogDetailsList = (_) => {
                             color: "#fff",
                             padding: "15px",
                             margin: "0",
-                            width: "100%"
+                            width: "100%",
                         }}
                     >
-                        {" "}
-                        DİĞER YAZILARIMIZ{" "}
+                        {t("blog.body.BLOG_SECTION_DETAILS_OTHER_BLOGS_HEADER")}
                     </div>
                     <div className={style.blogDetailsList}>
                         {blogs.map((blog) => (

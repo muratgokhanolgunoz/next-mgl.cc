@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Context from "../../../utils/context/Context";
 import { RiDeleteBinLine, RiEditBoxLine } from "react-icons/ri";
-import { deleteBlog, getSelectedBlog } from "../../../utils/services/blogService";
+import { deleteBlog } from "../../../utils/services/blogService";
 import { showToast } from "../../../core/functions";
 
 const TableRow = ({ blogItem, index }) => {

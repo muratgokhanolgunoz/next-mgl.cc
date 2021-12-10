@@ -155,7 +155,8 @@
         },
         "body": {
             "BLOG_SECTION_BUTTON": "Devamı . . .",
-            "BLOG_SECTION_ITEMS_AUTHOR_PREFIX": "tarafından"
+            "BLOG_SECTION_ITEMS_AUTHOR_PREFIX": "tarafından",
+            "BLOG_SECTION_DETAILS_OTHER_BLOGS_HEADER": "DİĞER YAZILARIMIZ"
         },
         "error": {
             "BLOG_SECTION_ERROR_BLOG_NOT_FOUND": "Yazı bulunamadı. Lütfen linki kontrol edip tekrar deneyin."
