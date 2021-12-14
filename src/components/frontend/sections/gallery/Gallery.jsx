@@ -46,12 +46,12 @@ class Gallery extends Component {
         this.setState(() => ({ nextVideoId: _videoId + 1 }));
         this.setState(() => ({ previousVideoId: _videoId - 1 }));
 
-        if (temp + 1 >= this.props.videos.length) {
-            this.setState(() => ({ nextVideoId: 0 }));
+        if (temp + 1 > this.props.videos.length) {
+            this.setState(() => ({ nextVideoId: 1 }));
         }
 
-        if (temp - 1 <= 0) {
-            this.setState(() => ({ previousVideoId: 0 }));
+        if (temp - 1 < 1) {
+            this.setState(() => ({ previousVideoId: this.props.videos.length }));
         }
 
         this.handleModalState(true);
@@ -110,15 +110,13 @@ class Gallery extends Component {
                     </Row>
                     <Row className={styles.videosBody}>
                         <Slider ref={(c) => (this.slider = c)} {...settings}>
-                            {this.props.videos.map((video) =>
+                            {this.props.videos.map((video) => (
                                 // Ignoring the empty 0th index from the json file in order to set the video sequence number exactly
                                 // Please see tools/videos/videos.json file
-                                video.id !== 0 ? (
-                                    <Col key={video.id} className={styles.videosBodyItems}>
-                                        <GalleryItem video={video} showVideo={this.showVideo} />
-                                    </Col>
-                                ) : null
-                            )}
+                                <Col key={video.id} className={styles.videosBodyItems}>
+                                    <GalleryItem video={video} showVideo={this.showVideo} />
+                                </Col>
+                            ))}
                         </Slider>
                         <div className={`${styles.videosBodyCarouselButton} text-center`}>
                             <Button

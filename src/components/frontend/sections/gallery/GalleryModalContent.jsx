@@ -4,21 +4,11 @@ import { Row, Col, Container } from "react-bootstrap";
 import { useTranslation } from "next-i18next";
 import GalleryNavigationButton from "./GalleryNavigationButton";
 
-const GalleryModalContent = ({
-    videos,
-    navigation,
-    previous,
-    current,
-    next,
-}) => {
+const GalleryModalContent = ({ videos, navigation, previous, current, next }) => {
     const { t } = useTranslation("common");
-
     return (
         <>
             <Container>
-                {
-                    console.log(previous, current, next)
-                }
                 <Row>
                     <Col>
                         <span
@@ -26,14 +16,14 @@ const GalleryModalContent = ({
                                 fontWeight: "bold",
                                 fontSize: "1.2em",
                             }}
-                        >{`${current} / ${videos.length - 1}`}</span>
+                        >{`${current} / ${videos.length}`}</span>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <iframe
-                            src={videos[current].src}
-                            title={videos[current].title}
+                            src={videos[current - 1].src}
+                            title={videos[current - 1].title}
                         ></iframe>
                     </Col>
                 </Row>
@@ -41,9 +31,7 @@ const GalleryModalContent = ({
                     <Col xs={4}>
                         {previous > 0 && (
                             <GalleryNavigationButton
-                                text={t(
-                                    "template.buttons.TEMPLATE_PREVIOUS_BUTTON"
-                                )}
+                                text={t("template.buttons.TEMPLATE_PREVIOUS_BUTTON")}
                                 click={navigation}
                                 parameter={previous}
                             />
@@ -52,9 +40,7 @@ const GalleryModalContent = ({
                     <Col xs={4}>
                         {next > 0 && (
                             <GalleryNavigationButton
-                                text={t(
-                                    "template.buttons.TEMPLATE_NEXT_BUTTON"
-                                )}
+                                text={t("template.buttons.TEMPLATE_NEXT_BUTTON")}
                                 click={navigation}
                                 parameter={next}
                             />
@@ -67,7 +53,7 @@ const GalleryModalContent = ({
 };
 
 GalleryModalContent.propTypes = {
-    videos: PropTypes.object.isRequired,
+    videos: PropTypes.array.isRequired,
     navigation: PropTypes.func.isRequired,
     previous: PropTypes.number.isRequired,
     current: PropTypes.number.isRequired,
