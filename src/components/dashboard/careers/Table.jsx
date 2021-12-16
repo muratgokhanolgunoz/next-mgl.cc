@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import TableRow from "./TableRow";
 import { Table as BootstrapTable } from "react-bootstrap";
 import { getCareerList } from "../../../utils/services/careerService";
@@ -21,7 +20,7 @@ const Table = (_) => {
         getCareerList()
             .then((response) => {
                 if (response.status === 200) {
-                    setCareerList(response.data.result.reverse());
+                    setCareerList(response.data.result);
                 }
             })
             .catch((error) => {
@@ -48,7 +47,7 @@ const Table = (_) => {
                 })
                 .catch((error) => {
                     console.log(error);
-                    showToast("bottom-right", error, "error");
+                    showToast("bottom-right", `${error}`, "error");
                 });
         }
     };
