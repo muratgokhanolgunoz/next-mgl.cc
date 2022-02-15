@@ -1,16 +1,13 @@
 import React from "react";
-import styles from "../../../../../styles/Schedule.module.scss"
+import PropTypes from "prop-types";
+import styles from "../../../../../styles/Schedule.module.scss";
 
-const ScheduleRow = ({ scheduleRowItem, funcCopyOfShipInformations }) => {
+const ScheduleRowDesktop = ({ scheduleRowItem, funcCopyOfShipInformations }) => {
     return (
         <>
             <tr
                 style={{ cursor: "pointer" }}
-                onClick={() =>
-                    funcCopyOfShipInformations(
-                        scheduleRowItem
-                    )
-                }
+                onClick={() => funcCopyOfShipInformations(scheduleRowItem)}
             >
                 <td>
                     <span className={styles.tableScheduleRowSpan}>
@@ -18,14 +15,10 @@ const ScheduleRow = ({ scheduleRowItem, funcCopyOfShipInformations }) => {
                     </span>
                 </td>
                 <td>
-                    <span className={styles.tableScheduleRowSpan}>
-                        {scheduleRowItem.ship_name}
-                    </span>
+                    <span className={styles.tableScheduleRowSpan}>{scheduleRowItem.ship_name}</span>
                 </td>
                 <td>
-                    <span className={styles.tableScheduleRowSpan}>
-                        {scheduleRowItem.eta_date}
-                    </span>
+                    <span className={styles.tableScheduleRowSpan}>{scheduleRowItem.eta_date}</span>
                 </td>
                 <td>
                     <span className={styles.tableScheduleRowSpan}>
@@ -51,4 +44,15 @@ const ScheduleRow = ({ scheduleRowItem, funcCopyOfShipInformations }) => {
         </>
     );
 };
-export default ScheduleRow;
+
+ScheduleRowDesktop.defaultProps = {
+    scheduleRowItem: {},
+    funcCopyOfShipInformations: undefined,
+};
+
+ScheduleRowDesktop.propsTypes = {
+    scheduleRowItem: PropTypes.object.isRequired,
+    funcCopyOfShipInformations: PropTypes.func.isRequired,
+};
+
+export default ScheduleRowDesktop;

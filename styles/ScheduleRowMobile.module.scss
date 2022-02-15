@@ -1,0 +1,73 @@
+@mixin componentPadding($padding) {
+    padding: $padding;
+}
+
+@mixin componentBorderRadius {
+    border-radius: 1rem;
+}
+
+@mixin componentBackgroundColor {
+    background-color: #fff;
+}
+
+.bgActive {
+    background-color: var(--color-2) !important;
+    color: #fff;
+}
+
+.bgInactive {
+    background-color: #fff;
+    color: #000;
+}
+
+.component {
+    display: flex;
+    flex-direction: column;
+    max-width: 992px;
+    @include componentPadding(0.5rem);
+    .menu {
+        cursor: pointer;
+        @include componentBackgroundColor();
+        @include componentPadding(1.5rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        @include componentBorderRadius();
+        .title {
+            font-size: 1.2rem;
+            font-weight: bold;       
+            flex-grow: 1;
+            overflow: hidden;
+            span {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                white-space: nowrap;                
+            }
+        }
+    }
+    .collapse {
+        display: flex;
+        flex-direction: column;
+        @include componentBackgroundColor();
+        margin-top: 5px;
+        @include componentBorderRadius();
+        @include componentPadding(1.5rem);
+        .row {
+            display: flex;
+            justify-content: space-between;
+            .title {
+                font-weight: bold;
+                text-align: left !important;
+                text-transform: uppercase;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .value {
+                text-align: right !important;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
+}

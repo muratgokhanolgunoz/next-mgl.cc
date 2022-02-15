@@ -4,7 +4,8 @@
         "buttons": {
             "TEMPLATE_CLOSE_BUTTON": "Close",
             "TEMPLATE_NEXT_BUTTON": "Next",
-            "TEMPLATE_PREVIOUS_BUTTON": "Previous"
+            "TEMPLATE_PREVIOUS_BUTTON": "Previous",
+            "TEMPLATE_COPY_BUTTON": "Copy"
         },
         "notification": {
             "errors": {
@@ -127,6 +128,7 @@
             "table": {
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "Destination",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Vessel Name",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_VOYAGE": "VOYAGE",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "ETA to POL",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Declaration Cut off",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Load Place",
@@ -137,6 +139,7 @@
                 "body": {
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Destination : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Vessel Name : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_VOYAGE": "Voyage : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Load Place : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_ACCEPTANCE_RANGE": "Load Acceptance Range : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Load Date : ",

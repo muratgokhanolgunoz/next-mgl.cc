@@ -1,7 +1,7 @@
 $backgroundOverlay: rgba(0, 0, 0, 0.7);
 
 @mixin mixinModalLayout {
-    max-width: 850px;
+    width: 100%;
     display: block;
     margin: auto;
 }
@@ -16,32 +16,37 @@ $backgroundOverlay: rgba(0, 0, 0, 0.7);
     padding: 100px;
     background-color: $backgroundOverlay;
     box-shadow: 10px 2px 10px $backgroundOverlay;
-    .modalHeader {
-        background-color: #fff;
-        padding: 5px;
-        @include mixinModalLayout;
-        button {
-            outline: none !important;
-            border: none;
-            display: flex;
-            float: right;
-            background-color: var(--color-2);
-            font-size: 1.2em;
-            border-radius: 50%;
-            height: 33px;
-            color: #fff;
-            align-items: center;
-            text-align: center;
+    .modalContent {
+        max-width: 850px;
+        display: block;
+        margin: auto;
+        .modalHeader {
+            background-color: #fff;
+            padding: 5px;
+            @include mixinModalLayout;
+            button {
+                outline: none !important;
+                border: none;
+                display: flex;
+                float: right;
+                background-color: var(--color-2);
+                font-size: 1.2em;
+                border-radius: 50%;
+                height: 33px;
+                color: #fff;
+                align-items: center;
+                text-align: center;
+            }
         }
-    }
-    .modalBody {
-        @include mixinModalLayout;
-        background-color: #fff;
-        iframe {
-            width: 100% !important;
-            height: 500px;
-            padding: 10px;
-            text-align: center;
+        .modalBody {
+            @include mixinModalLayout;
+            background-color: #fff;
+            iframe {
+                width: 100% !important;
+                height: 500px;
+                padding: 10px;
+                text-align: center;
+            }
         }
     }
 }

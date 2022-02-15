@@ -4,7 +4,8 @@
         "buttons": {
             "TEMPLATE_CLOSE_BUTTON": "Kapat",
             "TEMPLATE_NEXT_BUTTON": "İlerİ",
-            "TEMPLATE_PREVIOUS_BUTTON": "Gerİ"
+            "TEMPLATE_PREVIOUS_BUTTON": "Gerİ",
+            "TEMPLATE_COPY_BUTTON": "Kopyala"
         },
         "notification": {
             "errors": {
@@ -124,6 +125,7 @@
             "table": {
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "Varış Yeri",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Gemi Adı",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_VOYAGE": "Sefer Numarası",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "Tahmini Gemi Gelişi",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Beyanname Kapanış",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Yükleme Yeri",
@@ -134,6 +136,7 @@
                 "body": {
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Varış Yeri : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Gemi Adı : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_VOYAGE": "Sefer Numarası : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Yükleme Yeri : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_ACCEPTANCE_RANGE": "Yük Kabul Aralığı : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Yükleme Tarihi : ",

@@ -26,16 +26,24 @@ const Modal = ({ children, selector, toogle }) => {
         mounted &&
         createPortal(
             <div className={styles.modal}>
-                <div className={styles.modalHeader}>
-                    <button onClick={() => toogle(false)}>
-                        <VscChromeClose />
-                    </button>
+                <div className={styles.modalContent}>
+                    <div className={styles.modalHeader}>
+                        <button onClick={() => toogle(false)}>
+                            <VscChromeClose />
+                        </button>
+                    </div>
+                    <div className={styles.modalBody}>{children}</div>
                 </div>
-                <div className={styles.modalBody}>{children}</div>
             </div>,
             document.querySelector(selector)
         )
     );
+};
+
+Modal.defaultProps = {
+    children: undefined,
+    selector: undefined,
+    toogle: undefined,
 };
 
 Modal.propTypes = {

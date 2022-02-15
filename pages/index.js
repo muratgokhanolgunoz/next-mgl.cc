@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Layout from "../src/components/frontend/Layout";
@@ -15,9 +15,34 @@ import { getVideos } from "../src/utils/services/galleryServices";
 import { getBlogs } from "../src/utils/services/blogService";
 import getSchedule from "../src/utils/services/scheduleServices";
 import { getHome } from "../src/utils/services/homeService";
+import Context from "../src/utils/context/Context";
 
 const Index = (props) => {
     const { t } = useTranslation("common");
+    const context = useContext(Context);
+
+    useEffect(() => {
+        window.addEventListener("load", () => {
+            if (window.innerWidth > 992) {
+                context.funcSetIsMobile(false);
+            } else {
+                context.funcSetIsMobile(true);
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 992) {
+                context.funcSetIsMobile(false);
+            } else {
+                context.funcSetIsMobile(true);
+            }
+        });
+
+        return (_) => {
+            window.removeEventListener("load", () => {});
+            window.removeEventListener("resize", () => {});
+        };
+    });
 
     return (
         <div>
@@ -34,7 +59,7 @@ const Index = (props) => {
                 <meta
                     name="description"
                     content="Denizyolu parsiyel taşımacılığının Türk markası Midas Global Lojistik İstanbul Ambarlı gümrüğü limanlarından onlarca destinasyona her hafta düzenli parsiyel hizmeti sunmaktadır."
-                />                
+                />
                 <meta property="og:title" content={t("template.HTML_PAGE_TITLE")} />
                 <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
                 <meta property="og:type" content="website" />

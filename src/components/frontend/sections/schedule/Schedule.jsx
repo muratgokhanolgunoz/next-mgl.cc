@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useTranslation } from "next-i18next";
-import getSchedule from "../../../../utils/services/scheduleServices";
 import { showToast } from "../../../../core/functions";
 import Title from "../../tools/Title";
-import ScheduleRow from "./ScheduleRow";
-import { Container, Row, Table } from "react-bootstrap";
+import { Container, Row, Col, Alert } from "react-bootstrap";
 import styles from "../../../../../styles/Schedule.module.scss";
+import ScheduleRowMobile from "./ScheduleRowMobile";
 
 const Schedule = ({ schedule }) => {
     const { t } = useTranslation("common");
@@ -25,6 +24,10 @@ const Schedule = ({ schedule }) => {
             copyText +=
                 t("schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME") +
                 checkNull(_shipInfo.ship_name) +
+                "\n";
+            copyText +=
+                t("schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_VOYAGE") +
+                checkNull(_shipInfo.voyage) +
                 "\n";
             copyText +=
                 t("schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE") +
@@ -55,6 +58,7 @@ const Schedule = ({ schedule }) => {
                 checkNull(_shipInfo.last_updated);
 
             document.getElementById("clipboard-area").value = copyText;
+
             input = document.querySelector("#clipboard-area");
             input.select();
             input.setSelectionRange(0, 99999);
@@ -68,8 +72,8 @@ const Schedule = ({ schedule }) => {
         } catch (error) {
             showToast(
                 "bottom-right",
-                t("template.notification.errors.SCHEDULE_NULL_ALERT"),
-                "warning"
+                t("template.notification.errors.SCHEDULE_NULL_ALERT") + " / " + error,
+                "error"
             );
         }
     };
@@ -83,10 +87,10 @@ const Schedule = ({ schedule }) => {
                 backgroundSize: "cover",
                 backgroundPosition: "center center",
                 backgroundAttachment: "fixed",
-                overflow: "hidden"
+                overflow: "hidden",
             }}
         >
-            <Container fluid>
+            <Container>
                 <Row>
                     <Title
                         title={t("schedule.header.SCHEDULE_SECTION_TITLE")}
@@ -96,81 +100,23 @@ const Schedule = ({ schedule }) => {
                     />
                 </Row>
                 <Row>
-                    <textarea id="clipboard-area" className={styles.clipboardArea} type="hidden" />
-                    <Table className={styles.tableSchedule} responsive={true}>
-                        <thead>
-                            <tr>
-                                <th>
-                                    <span className={styles.tableScheduleRowSpan}>
-                                        {t(
-                                            "schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION"
-                                        )}
-                                    </span>
-                                </th>
-                                <th>
-                                    <span className={styles.tableScheduleRowSpan}>
-                                        {t(
-                                            "schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME"
-                                        )}
-                                    </span>
-                                </th>
-                                <th>
-                                    <span className={styles.tableScheduleRowSpan}>
-                                        {t(
-                                            "schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL"
-                                        )}
-                                    </span>
-                                </th>
-                                <th>
-                                    <span className={styles.tableScheduleRowSpan}>
-                                        {t(
-                                            "schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING"
-                                        )}
-                                    </span>
-                                </th>
-                                <th>
-                                    <span className={styles.tableScheduleRowSpan}>
-                                        {t(
-                                            "schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE"
-                                        )}
-                                    </span>
-                                </th>
-                                <th>
-                                    <span className={styles.tableScheduleRowSpan}>
-                                        {t(
-                                            "schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY"
-                                        )}
-                                    </span>
-                                </th>
-                                <th>
-                                    <span className={styles.tableScheduleRowSpan}>
-                                        {t(
-                                            "schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF"
-                                        )}
-                                    </span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {schedule.length ? (
-                                schedule.map((schedule, index) => (
-                                    <ScheduleRow
-                                        key={index}
-                                        scheduleRowItem={schedule}
-                                        funcCopyOfShipInformations={copyOfShipInformations}
-                                    />
-                                ))
-                            ) : (
-                                <tr>
-                                    <td colSpan="7">
-                                        <p className={styles.scheduleNullMessage}>
-                                            {t("schedule.body.SCHEDULE_SECTION_EMPTY_MESSAGE")}
-                                        </p>
-                                    </td>
-                                </tr>
-                            )}
-                        </tbody>
-                    </Table>
+                    <textarea
+                        id="clipboard-area"
+                        className={styles.clipboardArea}
+                        type="hidden"
+                        readOnly={true}
+                    />
+                    {schedule.length
+                        ? schedule.map((schedule, index) => (
+                              <Col key={index} lg="4">
+                                  <ScheduleRowMobile
+                                      rowIndex={index}
+                                      scheduleRowItem={schedule}
+                                      funcCopyOfShipInformations={copyOfShipInformations}
+                                  />
+                              </Col>
+                          ))
+                        : null}
                 </Row>
             </Container>
         </div>
