@@ -23,9 +23,10 @@ const BlogDetails = ({ blog }) => {
             parseTextToHMTL();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [blogId]);
 
     const parseTextToHMTL = () => {
+        document.getElementById("article").innerHTML = "";
         arrayFindElements = [];
         elementsJSON.map((e) => findElements(blog.BLOG_SECTION_ITEMS_ARTICLE, e));
         showArticle(blog.BLOG_SECTION_ITEMS_ARTICLE, sortArray(arrayFindElements));
