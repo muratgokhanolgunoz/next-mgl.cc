@@ -27,6 +27,11 @@ const ScheduleRowDesktop = ({ scheduleRowItem, funcCopyOfShipInformations }) => 
                 </td>
                 <td>
                     <span className={styles.tableScheduleRowSpan}>
+                        {scheduleRowItem.cutoff_time}
+                    </span>
+                </td>
+                <td>
+                    <span className={styles.tableScheduleRowSpan}>
                         {scheduleRowItem.load_place.substr(0, 25)}
                     </span>
                 </td>

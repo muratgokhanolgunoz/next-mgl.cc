@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production node server.js -p 3000",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public"

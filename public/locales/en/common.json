@@ -12,7 +12,7 @@
                 "404": "Requested Page Not Found",
                 "API_ERROR": "API connection error",
                 "SCHEDULE_NULL_ALERT": "Failed to copy ship information to clipboard. Please try again",
-                "GALLERY_VIDEO_NOT_FOUND": "Video not found"                
+                "GALLERY_VIDEO_NOT_FOUND": "Video not found"
             },
             "warnings": {
                 "FILE_SIZE": "Please upload within specified file size ranges"
@@ -26,7 +26,7 @@
         "NAVBAR_ITEM_HOME": "Home",
         "NAVBAR_ITEM_SERVICES": "Services",
         "NAVBAR_ITEM_ABOUT_US": "About Us",
-        "NAVBAR_ITEM_VIDEO_GALLERY": "Videos",
+        "NAVBAR_ITEM_VIDEO_GALLERY": "Vıdeos",
         "NAVBAR_ITEM_SHIP_PROGRAM": "Vessel Schedule",
         "NAVBAR_ITEM_ARTICLES_FROM_US": "Our Articles",
         "NAVBAR_ITEM_CAREER": "Career",
@@ -126,27 +126,29 @@
         },
         "body": {
             "table": {
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "Destination",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Vessel Name",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "DESTINATION",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "VESSEL NAME",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_VOYAGE": "VOYAGE",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "ETA to POL",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Declaration Cut off",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Load Place",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "Line",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "Vessel Cut off"
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "ETA TO POL",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "DECLARATION CUT OFF DATE",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING_TIME": "DECLARATION CUT OFF TIME",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "LOAD PLACE",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "LINE",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "VESSEL CUT OFF"
             },
             "clipboard": {
                 "body": {
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Destination : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Vessel Name : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_VOYAGE": "Voyage : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Load Place : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_ACCEPTANCE_RANGE": "Load Acceptance Range : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Load Date : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "Vessel Cutoff : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "ETA to POL : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "Line : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "Last Update : "
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "DESTINATION : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "VESSEL NAME : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_VOYAGE": "VOYAGE : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "LOAD PLACE : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_ACCEPTANCE_RANGE": "LOAD ACCEPTANCE RANGE : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "LOAD DATE : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "VESSEL CUT OFF DATE : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF_TIME": "VESSEL CUT OFF TIME : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "ETA TO POL : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "LINE : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "LAST UPDATE : "
                 },
                 "SCHEDULE_SECTION_CLIPBOARD_MESSAGE": "Vessel information copied to clipboard "
             },
@@ -211,8 +213,8 @@
         },
         "body": {
             "address_information": {
-                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "Şişli, Istanbul, Turkey",
-                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyeköy Mahallesi Şehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyeköy İş Merkezi"
+                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "Beylikdüzü, Istanbul, Turkey",
+                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Barış Mahallesi Belediye Caddesi No: 30 Ginza Lavinya B Blok Kat: 9 Daire: 163"
             },
             "phone_information": {
                 "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Monday - Friday / 09:00am - 18:00pm"

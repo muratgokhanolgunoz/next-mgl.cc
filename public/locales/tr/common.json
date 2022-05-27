@@ -123,27 +123,29 @@
         },
         "body": {
             "table": {
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "Varış Yeri",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Gemi Adı",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_VOYAGE": "Sefer Numarası",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "Tahmini Gemi Gelişi",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Beyanname Kapanış",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Yükleme Yeri",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "Acenta",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "Konsol Kapanış"
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "VARIŞ YERİ",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "GEMİ ADI",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_VOYAGE": "SEFER NUMARASI",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "TAHMİNİ GEMİ GELİŞİ",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "BEYANNAME KAPANIŞ TARİHİ",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING_TIME": "BEYANNAME KAPANIŞ SAATİ",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "YÜKLEME YERİ",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "ACENTA",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "KONSOL KAPANIŞ"
             },
             "clipboard": {
                 "body": {
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Varış Yeri : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Gemi Adı : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_VOYAGE": "Sefer Numarası : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Yükleme Yeri : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_ACCEPTANCE_RANGE": "Yük Kabul Aralığı : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Yükleme Tarihi : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "Konsol Kapanış : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "Tahmini Gemi Gelişi : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "Acenta : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "Son Güncelleme : "
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "VARIŞ YERİ : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "GEMİ ADI : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_VOYAGE": "SEFER NUMARASI : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "YÜKLEME YERİ : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_ACCEPTANCE_RANGE": "YÜK KABUL ARALIĞI : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "YÜKLEME TARİHİ : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "KONSOL KAPANIŞ TARİHİ : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF_TIME": "KONSOL KAPANIŞ SAATİ : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "TAHMİNİ GEMİ GELİŞİ : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "ACENTA : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "SON GÜNCELLEME : "
                 },
                 "SCHEDULE_SECTION_CLIPBOARD_MESSAGE": "Gemi bilgileri panoya kopyalandı"
             },
@@ -208,8 +210,8 @@
         },
         "body": {
             "address_information": {
-                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "Şişli, İstanbul, Türkiye",
-                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyeköy Mahallesi Şehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyeköy iş Merkezi"
+                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "Beylikdüzü, İstanbul, Türkiye",
+                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Barış Mahallesi Belediye Caddesi No: 30 Ginza Lavinya B Blok Kat: 9 Daire: 163"
             },
             "phone_information": {
                 "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Pazartesi - Cuma / 09:00 - 18:00"

@@ -40,6 +40,8 @@ const Schedule = ({ schedule }) => {
                 checkNull(_shipInfo.loading_date) +
                 " / " +
                 checkNull(_shipInfo.cut_off_date) +
+                " " +
+                checkNull(_shipInfo.cutoff_time) +
                 "\n";
             copyText +=
                 t(

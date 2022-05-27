@@ -83,6 +83,15 @@ const ScheduleRowMobile = ({ rowIndex, scheduleRowItem, funcCopyOfShipInformatio
 
                     <div className={styles.row}>
                         <span className={styles.title}>
+                            {t(
+                                "schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING_TIME"
+                            )}
+                        </span>
+                        <span className={styles.value}>{scheduleRowItem.cutoff_time}</span>
+                    </div>
+
+                    <div className={styles.row}>
+                        <span className={styles.title}>
                             {t("schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE")}
                         </span>
                         <span className={styles.value}>
